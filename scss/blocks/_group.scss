@@ -1,0 +1,127 @@
+.group {
+    padding: 0 20px;
+    margin-bottom: 150px;
+}
+
+.group__header {
+    margin-bottom: 50px;
+    font-family: $second-family;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 90%;
+    letter-spacing: 0.02em;
+}
+
+.group__box {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+
+}
+
+.group__card1,
+.group__card2,
+.group__card3 {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    width: 360px;
+}
+
+.group__card-image1,
+.group__card-image2,
+.group__card-image3 {
+    width: auto;
+    height: 164px;
+    border-radius: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.group__card-info1,
+.group__card-info2,
+.group__card-info3 {
+    position: relative;
+    padding-top: 32px;
+    padding-left: 33px;
+    padding-right: 20px;
+    border: 2px solid #6100dc;
+    border-radius: 20px;
+    min-height: 229px
+}
+
+.group-bottom__link-button::after, 
+.group-bottom__link-button::after, 
+.group-bottom__link-button::after {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    content: "ЗАПИСАТЬСЯ НА ПРОБНЫЙ УРОК";
+    border: 3px solid #6100dc;
+    border-radius: 20px;
+    max-width: 340px;
+    height: 70px;
+    padding: 14px;
+    background: #6100dc;
+    font-weight: 600;
+    line-height: 110%;
+    text-align: center;
+    color: #fff;
+    bottom: -40px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    transition: all 0.3s ease-in-out;
+}
+
+.group-bottom__link-button:hover::after {
+    background: #f7f6ff;
+        color: #46108a;
+}
+
+.group__card-image1 {
+    background-image: url(./../image/image1.jpg);
+}
+
+.group__card-image2 {
+    background-image: url(./../image/image2.jpg);
+}
+
+.group__card-image3 {
+    background-image: url(./../image/image3.jpg);
+}
+
+.card__number1,
+.card__number2,
+.card__number3 {
+    margin-right: 20px;
+    height: 100%;
+    width: 33px;
+    float: left;
+    font-family: $second-family;
+    font-weight: 700;
+    font-size: 120px;
+    line-height: 100%;
+    color: #d9d0ff;
+}
+
+.card__number2,
+.card__number3 {
+    width: 66px;
+    margin-right: 10px;
+}
+
+.card__title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 130%;
+
+}
+
+.card__text {
+    padding-top: 20px;
+    font-weight: 400;
+    font-size: 18px;
+}

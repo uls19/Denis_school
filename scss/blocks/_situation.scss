@@ -1,0 +1,85 @@
+.situation {
+    padding: 0 20px 70px;
+    overflow: hidden;
+}
+.situation__header {
+padding-bottom: 50px;
+font-family: $second-family;
+max-width: 1040px;
+font-weight: 700;
+font-size: 60px;
+line-height: 100%;
+}
+
+.situation__box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 200px);
+    gap: 13px;
+}
+.situation__itemA, 
+.situation__itemB, 
+.situation__itemC, 
+.situation__itemD, 
+.situation__itemE, 
+.situation__itemF {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    border-radius: 30px;
+}
+.situation__item-liter {
+font-family: $second-family;
+font-weight: 700;
+font-size: 120px;
+line-height: 100%;
+color: #fff;
+
+&_F {
+    margin-left: 48px;
+}
+}
+.situation__text {
+line-height: 130%;
+}
+
+.situation__text span {
+font-weight: 600;
+}
+
+.situation__itemA {
+    background: #fff3d6;
+}
+
+.situation__itemB {
+    background: #ffe483;
+}
+.situation__itemC {
+    background: #fff3d6;
+}
+.situation__itemD {
+    background: #ffe483;
+}
+.situation__itemE {
+    background: #fff3d6; 
+}
+.situation__itemF {
+    position: relative;
+    z-index: 5;
+}
+.situation__itemF::before {
+    position: absolute;
+    content: "";
+    background: url(./../image/background_yel.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 436px;
+    height: 331px;
+    top: -55px;
+    left: -24px;
+    z-index: -1;
+  
+
+}
