@@ -22,41 +22,35 @@ mask.remove();
     // }
 
 
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 20,
 
+     // Responsive breakpoints
+  breakpoints: {
+    // when window width is >= 575px
+    575: {
+      slidesPerView: 2,
+      spaceBetween: 20
+    },
+    // when window width is >= 767px
+   767: {
+      slidesPerView: 3,
+      spaceBetween: 20
+    }
+  },
 
-
-//   var swiper = new Swiper(".mySwiper", {
-//     slidesPerView: 1,
-//     spaceBetween: 30,
-
-//      // Responsive breakpoints
-//   breakpoints: {
-//     // when window width is >= 575px
-//     575: {
-//       slidesPerView: 2,
-//       spaceBetween: 30
-//     },
-//     // when window width is >= 991px
-//     991: {
-//       slidesPerView: 3,
-//       spaceBetween: 30
-//     }
-//   },
-
-//     navigation: {
-//       nextEl: ".swiper-button-next",
-//       prevEl: ".swiper-button-prev",
-//     },
-//     pagination: {
-//       el: ".swiper-pagination",
-//     },
-//     mousewheel: true,
-//     keyboard: true,
-//     pagination: {
-//       el: ".swiper-pagination",
-//       clickable: true,
-//     },
-//   });
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    mousewheel: true,
+    keyboard: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
 
 
 
