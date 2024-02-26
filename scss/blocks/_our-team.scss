@@ -72,24 +72,20 @@ background: #6100dc;
     font-weight: 700;
 }
 
-
-.out-team__swiper-wrapper {
-    max-width: 758px;
-}
-
-.swiper {
+.our-teamSwiper {
     max-width: 100%;
     height: 100%;
 }
 
-.swiper-slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.swiper-wrapper_our-team {
     height: 414px;
-    width: 240px;
 }
 
+.swiper-slide_our-team {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
 .slide-inner {
     height: 347px;
     width: 100%;

@@ -22,7 +22,7 @@ mask.remove();
     // }
 
 
-  var swiper = new Swiper(".mySwiper", {
+  var swiper = new Swiper(".our-teamSwiper", {
     slidesPerView: 1,
     spaceBetween: 20,
 
@@ -39,17 +39,46 @@ mask.remove();
       spaceBetween: 20
     }
   },
-
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: ".our-button-next",
+      prevEl: ".our-button-prev",
     },
     mousewheel: true,
     keyboard: true,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
+  });
+
+
+
+  var swiper = new Swiper(".reviewsSwiper", {
+    slidesPerView: 1,
+    spaceBetween: 20,
+
+     // Responsive breakpoints
+  breakpoints: {
+    // when window width is >= 575px
+    575: {
+      slidesPerView: 2,
+      spaceBetween: 20
     },
+    // when window width is >= 767px
+   767: {
+      slidesPerView: 3,
+      spaceBetween: 20
+    },
+
+      // when window width is >= 991px
+   991: {
+    slidesPerView: 3,
+    spaceBetween: 40
+  }
+  },
+
+    navigation: {
+      nextEl: ".reviews-button-next",
+      prevEl: ".reviews-button-prev",
+    },
+    mousewheel: true,
+    keyboard: true,
   });
 
 
