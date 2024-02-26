@@ -1,8 +1,8 @@
 @charset "UTF-8";
 /* Reset and base styles  */
-@import url(./../../fonts/Comfortaa-Bold/style.css);
-@import url(./../../fonts/Gilroy-Regular/style.css);
-@import url(./../../fonts/Gilroy-Semibold/style.css);
+@import url(./../fonts/Comfortaa-Bold/style.css);
+@import url(./../fonts/Gilroy-Regular/style.css);
+@import url(./../fonts/Gilroy-Semibold/style.css);
 * {
   padding: 0px;
   margin: 0px;
