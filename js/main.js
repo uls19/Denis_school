@@ -81,8 +81,6 @@ window.onload = function () {
     keyboard: true,
   });
 
-  /*Yandex Map*/
-
   /* Yandex Map */
 
   // Функция ymaps.ready() будет вызвана, когда
@@ -91,7 +89,7 @@ window.onload = function () {
   ymaps.ready(init);
   function init() {
     // Создание карты.
-    var map = new ymaps.Map('map', {
+    const map = new ymaps.Map('map', {
       // Координаты центра карты.
       // Порядок по умолчанию: «широта, долгота».
       // Чтобы не определять координаты центра карты вручную,
@@ -102,7 +100,7 @@ window.onload = function () {
       zoom: 16,
     });
 
-    var myPlacemark = new ymaps.Placemark(
+    const myPlacemark = new ymaps.Placemark(
       [55.856392292351394, 37.49436198412817],
       {
         balloonContent: `
@@ -141,45 +139,6 @@ window.onload = function () {
     // myPlacemark.balloon.open();
 
   }
-
-
-
-  // // Считываем поле ввода
-  // const phoneInput = document.querySelector(".phone");
-  // // Считываем кнопку
-  // const btn = document.querySelector(".btn");
-
-  // // Создаем маску в инпуте
-  // const phoneMask = new IMask(phoneInput, {
-  //   mask: "+{7}(000)000-00-00",
-  // });
-
-  // // Обработчик события для инпута
-  // phoneInput.addEventListener("input", phoneInputHandler);
-  // // Обработчик события для кнопки
-  // btn.addEventListener("click", btnHandler);
-
-  // // Если ввели правлильно - кнопка активна
-  // function phoneInputHandler() {
-  //   if (phoneMask.masked.isComplete) {
-  //     btn.classList.add("btn_active");
-  //   } else {
-  //     btn.classList.remove("btn_active");
-  //   }
-  // }
-
-  // btn.addEventListener ("click", btnHandler);
-  // // Отправляем номер телефона
-  //   async function btnHandler(e) {
-  //     e.preventDefault();
-  //     console.log(phoneMask.masked.unmaskedValue);
-  //     // return await fetch("send_msg.php", {
-  //     //   method: "POST",
-  //     //   body: phoneMask.unmaskedValue,
-  //     // });
-  //   }
-
-
 
 
   //   const footerYearEl = document.querySelector('.footer__year');

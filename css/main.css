@@ -1710,6 +1710,11 @@ body {
   opacity: 1;
 }
 
+/* откл.Создать свою карту */
+[class*=gototech] {
+  display: none !important;
+}
+
 .contacts__info {
   position: relative;
   padding-top: 42px;

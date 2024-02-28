@@ -39,6 +39,10 @@ letter-spacing: 0.02em;
     opacity: 1;
 }
 
+/* откл.Создать свою карту */
+[class*="gototech"] {
+    display: none !important;
+}
 
 .contacts__info {
     position: relative;
