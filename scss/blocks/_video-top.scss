@@ -103,7 +103,8 @@
     white-space: nowrap;
     background: #6100dc;
     color: white;
-    transition: all 0.3s ease-in-out;
+    transition: background 0.3s ease-in-out,
+    color 0.3s ease-in-out;
 
     &:hover {
         background: #f7f6ff;
@@ -126,9 +127,62 @@
         
     }
 }
+
 .video-top__link-button2 {
     width: 360px;
     bottom:0;
     left: 0;
 }
 
+@include Tablet {
+
+    .video-top {
+        margin-bottom: 90px;
+    }
+    
+   .video-top__header {
+        padding-bottom: 50px;
+        font-size: 36px;
+}
+
+.video-top__box-right {
+    padding-top: 150px;
+    max-width: 320px;
+}
+
+.video-top__text {
+    font-size: 16px;
+    &_bold {
+        font-size: 16px;
+    }
+}
+.video-top__header::before {
+    top: -34px;
+    left: 190px;
+    
+}
+.video-top__link-button1,
+ .video-top__link-button2 {
+ font-size: 16px;
+ height: 60px; 
+ border-radius: 15px;
+ }
+
+
+ .video-top__link-button1 {
+    width: 290px;
+   
+}
+
+.video-top__link-button1::after {
+    width: 78px;
+    height: 78px;
+    background-size: cover;
+}
+
+.video-top__link-button2 {
+    width: 320px;
+   
+}
+
+}

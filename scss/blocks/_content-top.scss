@@ -58,3 +58,14 @@
 .content__top-info-text span {
     font-weight: 600;
 }
+
+@include Tablet {
+
+.content__top {
+        padding: 57px 20px 90px;
+    }
+
+    .content__top-info-text {
+        font-size: 16px;
+    }
+}

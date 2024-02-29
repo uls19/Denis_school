@@ -206,7 +206,8 @@ background: #6100dc;
     left: 0;
     right: 0;
     margin: 0 auto;
-    transition: all 0.3s ease-in-out;
+    transition: background 0.3s ease-in-out,
+    color 0.3s ease-in-out;
 }
 
 .inner__link-button:hover::after {
@@ -224,6 +225,32 @@ background: #6100dc;
 }
 
 @include Tablet {
+
+    .our-team {
+        margin-bottom: 90px;
+    }
+
+    .our-team__header {
+        
+        font-size: 36px;  
+    }
+
+    .our-team__button {
+        min-width: 130px;
+    }
+
+    .our-button-prev,
+    .our-button-next {
+        width: 48px;
+        height: 48px;
+    }
+
+    .our-button-next:after,
+     .our-button-prev:after {
+        font-size: 24px;
+     }
+       
+
     .our-team__box {
         display: flex;
         flex-direction: column;
@@ -237,4 +264,22 @@ background: #6100dc;
     .our-team__box-left {
         max-width: 100%;
     }
+
+    .out-team__text {
+        font-size: 16px;
+    }
+
+    .inner__text,
+    .inner__name {
+        font-size: 16px;
+    }
+
+    .inner__link-button::after {
+        border-radius: 15px;
+        max-width: 200px;
+        height: 60px;
+       font-size: 16px;
+    }
+    
+    
 }

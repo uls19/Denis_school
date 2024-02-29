@@ -2,6 +2,7 @@
     max-width: 1920px;
     margin: 0 auto;
     padding-top: 170px;
+    padding-bottom: 20px;
     background: url(./../image/background_bottom.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -75,6 +76,9 @@ transition: color 0.3s ease;
     .footer__info-right {
         grid-column: 2/3;
         grid-row: 2/3;
+    }
+    .footer__link {
+        font-size: 16px;
     }
 
 }

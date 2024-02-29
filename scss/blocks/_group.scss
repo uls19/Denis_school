@@ -51,8 +51,8 @@
     min-height: 229px
 }
 
-.group-bottom__link-button::after, 
-.group-bottom__link-button::after, 
+.group-bottom__link-button::after,
+.group-bottom__link-button::after,
 .group-bottom__link-button::after {
     position: absolute;
     display: flex;
@@ -73,12 +73,13 @@
     left: 0;
     right: 0;
     margin: 0 auto;
-    transition: all 0.3s ease-in-out;
+    transition: background 0.3s ease-in-out,
+    color 0.3s ease-in-out;
 }
 
 .group-bottom__link-button:hover::after {
     background: #f7f6ff;
-        color: #46108a;
+    color: #46108a;
 }
 
 .group__card-image1 {
@@ -124,4 +125,44 @@
     padding-top: 20px;
     font-weight: 400;
     font-size: 18px;
+}
+
+
+@include Tablet {
+
+    .group {
+        padding: 0 20px;
+        margin-bottom: 120px;
+    }
+
+    .group__header {
+        font-size: 36px;
+    }
+
+    .card__number1,
+    .card__number2,
+    .card__number3 {
+        height: auto;
+        font-size: 90px;
+    }
+
+    .card__title {
+        font-size: 21px;
+
+    }
+
+    .card__text {
+        font-size: 16px;
+    }
+
+    .group-bottom__link-button::after,
+    .group-bottom__link-button::after,
+    .group-bottom__link-button::after {
+        position: absolute;
+        border-radius: 15px;
+        max-width: 270px;
+        height: 60px;
+        font-size: 16px;
+        padding: 14px;
+    }
 }

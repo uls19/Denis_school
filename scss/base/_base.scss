@@ -47,6 +47,10 @@ body {
     color: #151515;
 }
 
+.no-scroll {
+  overflow-y: hidden;
+}
+
 .container {
   padding-left: calc(50% - 1200px / 2);
   padding-right: calc(50% - 1200px / 2);

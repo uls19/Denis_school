@@ -9,17 +9,36 @@ window.addEventListener('load', () => {
 
 window.onload = function () {
 
-  // /*Nav icon*/
-  // const navBtn = document.querySelector('.nav-icon-btn');
-  // const navIcon = document.querySelector('.nav-icon');
-  // const nav = document.querySelector('.header__menu');
+  /*Nav icon*/
+  const burgerEl = document.querySelector('.nav-icon-btn');
+  const navIcon = document.querySelector('.nav-icon');
+  const menuEl = document.querySelector('.header__menu-up');
 
-  // navBtn.onclick = function () {
-  //     navIcon.classList.toggle('nav-icon_active'); 
-  //     nav.classList.toggle('menu__tablet');
-  //     document.body.classList.toggle('no-scroll');
+// вызываем элемент и скрываем если клик был за его пределами
 
-  // }
+  const toggleMenu = function () {
+  menuEl.classList.toggle("menu_show");
+  navIcon.classList.toggle('nav-icon_active');
+  document.body.classList.toggle('no-scroll');
+
+}
+
+burgerEl.addEventListener("click", function (e) {
+  e.stopPropagation();
+  toggleMenu();
+});
+
+document.addEventListener("click", function (e) {
+  const target = e.target;
+  const its_menu = target == menuEl || menuEl.contains(target);
+  const its_btnMenu = target == burgerEl;
+  const menu_is_active = menuEl.classList.contains("menu_show");
+
+  if (!its_menu && !its_btnMenu && menu_is_active) {
+    toggleMenu();
+  }
+});
+
 
   /* Slider our-team*/
   const swiper1 = new Swiper(".our-teamSwiper", {

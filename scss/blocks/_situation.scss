@@ -83,3 +83,16 @@ font-weight: 600;
   
 
 }
+
+@include Tablet {
+    .situation__header {
+        font-size: 36px;
+}
+
+.situation__item-liter {
+    font-size: 54px;
+}
+.situation__text {
+    font-size: 16px;
+}
+}

@@ -1,6 +1,8 @@
 .header {
+    position: relative;
     max-width: 1920px;
     margin: 0 auto;
+    overflow-x: hidden;
 }
 
 .header__top {
@@ -64,6 +66,71 @@
         color: #6100dc;
     }
 }
+
+/* Nav Icon */
+
+.header__nav-btn {
+    display: none;
+}
+
+.nav-icon-btn {
+    --time: 0.1s;
+    --width: 40px;
+    --height: 30px;
+    --line-height: 1px;
+    --line-margin: 2;
+    --color:#151515;
+    height: var(--height);
+    width: var(--width);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .nav-icon {
+    position: relative;
+    width: var(--width);
+    height: var(--line-height);
+    background-color: var(--color);
+  }
+  
+  .nav-icon::before,
+  .nav-icon::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    width: var(--width);
+    height: var(--line-height);
+    background-color: var(--color);
+    transition: transform var(--time) ease-in, top var(--time) linear var(--time);
+  }
+  
+  .nav-icon::before {
+    top: calc(var(--line-height) * -8);
+  }
+  
+  .nav-icon::after {
+    top: calc(var(--line-height) * 8);
+  }
+  
+  .nav-icon.nav-icon_active {
+    background-color: transparent;
+  }
+  
+  .nav-icon.nav-icon_active::before,
+  .nav-icon.nav-icon_active::after {
+    top: 0;
+    transition: top var(--time) linear, transform var(--time) ease-in var(--time);
+  }
+  
+  .nav-icon.nav-icon_active::before {
+    transform: rotate(45deg);
+  }
+  
+  .nav-icon.nav-icon_active::after {
+    transform: rotate(-45deg);
+  }
 
 .header__nav {
     display: flex;
@@ -155,7 +222,8 @@
     white-space: nowrap;
     background: #6100dc;
     color: white;
-    transition: all 0.3s ease-in-out;
+    transition: background 0.3s ease-in-out,
+    color 0.3s ease-in-out;
 
     &:hover {
         background: #f7f6ff;
@@ -193,6 +261,54 @@ line-height: 130%;
     font-weight: 700;
 }
 
+
+.header__menu-up {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    top: 80px;
+    right: -270px;
+    width: 244px;
+    border-bottom-left-radius: 20px;
+    background: #f7f6ff;  
+    padding:24px 24px 40px; 
+    row-gap: 24px;
+
+    transition: right 0.8s ease-in-out;
+}
+
+.menu_show {
+    right: 0;
+}
+
+.header__up-lists li {
+    margin-bottom: 7px;
+    
+}
+.nav__up-link {
+    font-weight: 600;
+    line-height: 100%;
+    padding: 5px 0;
+    white-space: nowrap;
+    font-size: 16px;
+    color: #151515;
+}
+
+.header__up-link-button {
+        padding: 12px 20px 13px;
+        border: 1px solid #521a99;
+        background:#521a99;
+        border-radius: 10px;
+        font-weight: 600;
+        line-height: 100%;
+        text-align: center;
+        white-space: nowrap;
+        color: #ffffff;
+        font-size: 16px;
+}
+
+
 @include Desktop {
    .header__info-title {
     max-width: 600px;
@@ -202,4 +318,46 @@ line-height: 130%;
    .header__info-text {
     font-size: 22px;
    }
+}
+
+@include Tablet {
+    .header__top-right {
+        justify-content: flex-end;
+        width: auto;
+    }
+     
+    .header__menu,
+    .header__top-button {
+        display: none;
+    }
+
+    .header__nav-btn {
+        display: block;
+    }
+
+    .header__menu-up {
+        display: flex;
+    }
+
+    .header__info-title {
+    max-width: 370px;
+    font-size: 36px;
+    }
+
+    .header__info-text {
+        max-width: 370px;
+    }
+
+    .header__info-link-button {
+        font-size: 16px;
+        height: 60px;
+        max-width: 320px; 
+        border-radius: 15px;
+    }
+    .header__link-tel,
+    .header__info-item-text {
+        font-size: 16px;
+    }
+
+    
 }

@@ -118,3 +118,18 @@
  }
 }
 }
+
+@include Tablet {
+
+    .classes {
+        padding: 0 20px 116px 20px;
+    }
+
+    .classes__header {
+        font-size: 36px;
+    }
+
+    .classes-text {
+        font-size: 16px;
+    }
+}

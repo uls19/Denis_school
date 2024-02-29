@@ -170,7 +170,8 @@ text-align: center;
     white-space: nowrap;
     background: #6100dc;
     color: white;
-    transition: all 0.3s ease-in-out;
+    transition: background 0.3s ease-in-out,
+    color 0.3s ease-in-out;
    
 
     &:hover {
@@ -180,6 +181,9 @@ text-align: center;
 }
 
 @include Tablet {
+    .aside {
+        margin-bottom: 90px;
+    }
 
     .aside__wrapper-image1, 
     .aside__wrapper-image2, 
@@ -201,8 +205,26 @@ text-align: center;
 
     }
 
+    .aside__header {
+        font-size: 36px;   
+    }
+
     .aside__info-title {
         padding-top: 20px;
+        font-size: 21px;
+    }
+
+    .aside__info-text {
+        
+        font-size: 16px;
+    }
+
+
+    .aside__present {
+        min-height: auto;
+        margin-top: 90px;
+        padding-top: 50px;
+      
     }
     
     .aside__present::before {
@@ -211,6 +233,21 @@ text-align: center;
 
     .aside__present-title {
         color: white;
+        font-size: 36px;
     }
+
+    .aside__present-text {
+        font-size: 21px;
+    }
+
+
+    .aside__present-link-button {
+        width: 290px;
+        height: 60px;
+        border: 1px solid #6100dc;
+        border-radius: 15px;
+        font-size: 16px;
+        
+}
 }
 

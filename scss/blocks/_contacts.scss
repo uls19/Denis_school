@@ -1,5 +1,5 @@
 .contacts {
-    padding: 0 20px 80px;
+    padding: 36px 20px 80px;
     overflow: hidden;
 }
 .contacts__header {
@@ -125,13 +125,23 @@ transition: all 0.2s linear;
   }
 
 @include Tablet {
+
+    .contacts__header {
+        font-size: 36px;
+    }
    
     .contacts__info {
         padding-left: 50px;
         padding-right: 20px;
-      
-    
+        
 }
+.contacts__link,
+.contacts__info-text,
+.contacts__info-title {
+    font-size: 16px;
+}
+
+
 }
 
 @include Mobile {

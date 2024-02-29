@@ -95,7 +95,8 @@ color: #151515;
     white-space: nowrap;
     background: #6100dc;
     color: white;
-    transition: all 0.3s ease-in-out;
+    transition: background 0.3s ease-in-out,
+    color 0.3s ease-in-out;
    
 
     &:hover {
@@ -103,4 +104,45 @@ color: #151515;
         color: #46108a;
     }
 
+}
+
+@include Tablet {
+    .reviews {
+        margin-bottom: 90px;
+    }
+
+    .reviews__header {
+        font-size: 36px;
+        line-height: 90%;
+}
+
+.reviews__button {
+   min-width: 130px;
+}
+
+.reviews-button-next,
+ .reviews-button-prev {
+    width: 48px;
+    height: 48px;   
+}
+
+.reviews-button-next:after,
+.reviews-button-prev:after {
+    font-size: 24px;
+}
+
+.reviews__link,
+.reviews__name,
+.reviews__text {  
+    font-size: 16px;
+   
+}
+
+.reviews__link-button {
+    font-size: 16px;
+    width: 290px;
+    height: 60px;
+    border-radius: 15px;
+
+}
 }
