@@ -2421,45 +2421,38 @@ body {
   .festival {
     padding: 0 10px;
   }
+  .festival__box {
+    gap: 13px;
+  }
+  .festival__text-left {
+    grid-column: 1/5;
+    grid-row: 1/2;
+  }
+  .festival__image1 {
+    grid-column: 1/5;
+    grid-row: 2/3;
+  }
+  .festival__image2 {
+    grid-column: 1/5;
+    grid-row: 3/4;
+  }
+  .festival__text-right {
+    grid-column: 1/5;
+    grid-row: 4/5;
+    padding-top: 20px;
+  }
+  .festival__image3 {
+    grid-column: 1/5;
+    grid-row: 5/6;
+  }
+  .festival__link-button {
+    width: auto;
+    max-width: 290px;
+    height: 60px;
+    border-radius: 15px;
+    font-size: 16px;
+  }
 }
-.festival__box {
-  gap: 13px;
-}
-
-.festival__text-left {
-  grid-column: 1/5;
-  grid-row: 1/2;
-}
-
-.festival__image1 {
-  grid-column: 1/5;
-  grid-row: 2/3;
-}
-
-.festival__image2 {
-  grid-column: 1/5;
-  grid-row: 3/4;
-}
-
-.festival__text-right {
-  grid-column: 1/5;
-  grid-row: 4/5;
-  padding-top: 20px;
-}
-
-.festival__image3 {
-  grid-column: 1/5;
-  grid-row: 5/6;
-}
-
-.festival__link-button {
-  width: auto;
-  max-width: 290px;
-  height: 60px;
-  border-radius: 15px;
-  font-size: 16px;
-}
-
 .questions {
   padding: 0 20px;
   margin-bottom: 70px;
