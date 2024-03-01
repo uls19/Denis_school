@@ -172,4 +172,13 @@ transition: all 0.2s linear;
     }
 }
 
+@include X-Mobile {
+    .contacts {
+        padding: 36px 10px 80px;
+}
+.contacts__info {
+    padding-left: 50px;
+   
+}
 
+}

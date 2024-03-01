@@ -46,6 +46,7 @@
     padding-top: 32px;
     padding-left: 33px;
     padding-right: 20px;
+    padding-bottom: 32px;
     border: 2px solid #6100dc;
     border-radius: 20px;
     min-height: 229px
@@ -164,5 +165,40 @@
         height: 60px;
         font-size: 16px;
         padding: 14px;
+    }
+}
+
+
+@include Mobile {
+    .group__box {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 70px;
+    }
+
+    .group__card1,
+     .group__card2,
+      .group__card3 {
+        width: 470px;
+}
+
+.group__card-image1,
+ .group__card-image2,
+  .group__card-image3 {
+   background-size: cover;
+   
+}
+
+.group__card-info1,
+ .group__card-info2,
+  .group__card-info3 {
+    min-height: 180px;
+
+}
+}
+
+@include X-Mobile {
+    .group {
+        padding: 0 10px;
     }
 }

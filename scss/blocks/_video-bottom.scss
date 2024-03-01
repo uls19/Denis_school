@@ -192,6 +192,7 @@
     width: 290px;
     margin: 0 auto;
     border-radius: 15px;
+    font-size: 16px;
 
 }
 
@@ -200,4 +201,70 @@
     height: 78px;
     background-size: cover;
 }
+}
+
+@include X-Mobile {
+    .video-bottom {
+        padding: 0 10px;
+    }
+
+    .video-bottom__header {
+        font-size: 34px;
+    }
+
+    .video-bottom__box {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr) auto;
+        row-gap: 13px;
+        column-gap: normal;
+        max-width: 390px;
+        margin: 0 auto;
+    }
+
+    .video-bottom__item1 {
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    
+    .video-bottom__item2 {
+      
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    
+    .video-bottom__item3 {
+      
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+    
+    .video-bottom__item4 {
+        grid-column: 1/2;
+        grid-row: 4/5;
+    }
+    
+    .video-bottom__item5 {
+       display: none;
+    }
+
+    .video-bottom__box-button {
+        width: 100%;
+        grid-column: 1/2;
+        grid-row: 5/6;  
+    }
+
+    .video-bottom__link-button {
+        width: auto;
+        max-width: 290px;
+        border-radius: 15px 30px 30px 15px;
+        padding-right: 30px;
+    }
+
+    .video-bottom__link-button::after {
+        width: 60px;
+        height: 60px;
+        background-size: cover;
+        right: -4px;
+    }
 }

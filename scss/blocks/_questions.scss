@@ -71,3 +71,16 @@
 
 
 }
+
+@include X-Mobile {
+
+    .questions {
+        padding: 0 10px; 
+    }
+
+    .questions__link {
+        height: auto;
+        min-height: 60px;
+
+    }
+}

@@ -44,6 +44,10 @@ background: #6100dc;
    
 }
 
+.swiper-pagination_reviews {
+    display: none;
+}
+
 .reviewsSwiper {
     max-width: 100%;
     height: 100%;
@@ -146,3 +150,34 @@ color: #151515;
 
 }
 }
+
+@include X-Mobile {
+
+    .reviews {
+        padding: 0 10px;
+    }
+
+    .reviews__button {
+            min-width: 90px;
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            display: none;
+        }
+    
+        .swiper-pagination_reviews {
+            display: flex;
+            justify-content: flex-end;
+            top: 20px;
+            height: 26px;
+            padding-right: 20px;
+           
+        }
+
+        .reviews__link-button {
+            width: auto;
+            max-width: 290px;
+        }
+
+    }

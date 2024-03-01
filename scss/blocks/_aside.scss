@@ -251,3 +251,33 @@ text-align: center;
 }
 }
 
+@include Mobile {
+    .aside__wrapper-image1,
+     .aside__wrapper-image2, 
+     .aside__wrapper-image3 {
+        background-position: center;
+    }
+}
+
+@include X-Mobile {
+    .aside {
+        padding: 0 10px;
+    }
+
+    .aside__header {
+        font-size: 28px;
+    }
+
+    .aside__box1,
+     .aside__box2,
+      .aside__box3 {
+    
+        padding: 15px 15px 20px;
+}
+
+.aside__present-link-button {
+    width: 100%;
+    max-width: 290px;
+}
+}
+

@@ -45,6 +45,10 @@ background: #6100dc;
    
 }
 
+.swiper-pagination_our-team {
+    display: none;
+}
+
 .our-team__box {
     display: flex;
     justify-content: space-between;
@@ -224,6 +228,9 @@ background: #6100dc;
     object-fit: cover;
 }
 
+
+
+
 @include Tablet {
 
     .our-team {
@@ -283,3 +290,28 @@ background: #6100dc;
     
     
 }
+
+@include X-Mobile {
+
+    .our-team {
+        padding: 0 10px;
+    }
+
+    .our-team__button {
+        min-width: 90px;
+
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none;
+    }
+
+    .swiper-pagination_our-team {
+        display: flex;
+        justify-content: flex-end;
+        top: -5px;
+        height: 26px;
+        padding-right: 10px;
+       
+    }
+    }

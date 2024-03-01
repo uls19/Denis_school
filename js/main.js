@@ -58,6 +58,12 @@ document.addEventListener("click", function (e) {
         spaceBetween: 20
       }
     },
+
+    pagination: {
+      el: ".swiper-pagination",
+      type: "fraction",
+    },
+
     navigation: {
       nextEl: ".our-button-next",
       prevEl: ".our-button-prev",
@@ -90,6 +96,11 @@ document.addEventListener("click", function (e) {
         slidesPerView: 3,
         spaceBetween: 40
       }
+    },
+
+    pagination: {
+      el: ".swiper-pagination",
+      type: "fraction",
     },
 
     navigation: {
