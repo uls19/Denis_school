@@ -1303,15 +1303,13 @@ body {
   min-height: 229px;
 }
 
-.group-bottom__link-button::after,
-.group-bottom__link-button::after,
 .group-bottom__link-button::after {
   position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
   content: "ЗАПИСАТЬСЯ НА ПРОБНЫЙ УРОК";
-  border: 3px solid #6100dc;
+  border: 2px solid #6100dc;
   border-radius: 20px;
   max-width: 340px;
   height: 70px;
@@ -1397,8 +1395,6 @@ body {
   .card__text {
     font-size: 16px;
   }
-  .group-bottom__link-button::after,
-  .group-bottom__link-button::after,
   .group-bottom__link-button::after {
     position: absolute;
     border-radius: 15px;
@@ -2020,7 +2016,7 @@ body {
   align-items: center;
   justify-content: center;
   content: "ПОДРОБНЕЕ";
-  border: 3px solid #6100dc;
+  border: 2px solid #6100dc;
   border-radius: 20px;
   max-width: 200px;
   height: 70px;
