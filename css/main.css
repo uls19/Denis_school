@@ -1859,14 +1859,14 @@ body {
 .our-button-prev {
   border: 2px solid #6100dc;
   border-radius: 100%;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   color: white;
   background: #6100dc;
 }
 .our-button-next:after,
 .our-button-prev:after {
-  font-size: 30px;
+  font-size: 26px;
 }
 
 .our-button-prev.swiper-button-disabled,
@@ -2137,14 +2137,14 @@ body {
 .reviews-button-prev {
   border: 2px solid #6100dc;
   border-radius: 100%;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   color: white;
   background: #6100dc;
 }
 .reviews-button-next:after,
 .reviews-button-prev:after {
-  font-size: 30px;
+  font-size: 26px;
 }
 
 .reviews-button-prev.swiper-button-disabled,
@@ -2495,9 +2495,26 @@ body {
   height: 38px;
   border-radius: 100%;
   background: #6100dc;
-  background-image: url(./../image/Line_v.svg), url(./../image/Line_g.svg);
+  background-image: url(./../image/Line_g.svg), url(./../image/Line_v.svg);
   background-repeat: no-repeat, no-repeat;
   background-position: center, center;
+}
+
+.questions__text {
+  margin-bottom: 15px;
+  display: none;
+}
+
+.questions__item_active .questions__list-icon {
+  transform: rotate(45deg);
+}
+
+.questions__item_active .questions__link {
+  background: #f7f6ff;
+}
+
+.questions__item_active .questions__text {
+  display: block;
 }
 
 @media screen and (max-width: 991px) {

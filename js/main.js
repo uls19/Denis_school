@@ -111,6 +111,12 @@ document.addEventListener("click", function (e) {
     keyboard: true,
   });
 
+  document.querySelectorAll('.questions__link').forEach((item) => {
+    item.addEventListener('click', () => {
+item.parentNode.classList.toggle('questions__item_active')
+    })
+  });
+
   /* Yandex Map */
 
   // Функция ymaps.ready() будет вызвана, когда

@@ -48,11 +48,28 @@
     height: 38px;
     border-radius: 100%;
     background: #6100dc;
-    background-image:url(./../image/Line_v.svg),
-    url(./../image/Line_g.svg);
+    background-image: url(./../image/Line_g.svg),
+    url(./../image/Line_v.svg);
     background-repeat: no-repeat, no-repeat;
-    background-position: center, center;
-   
+    background-position: center, center; 
+}
+
+.questions__text {
+    margin-bottom: 15px;
+    display: none;
+}
+
+.questions__item_active .questions__list-icon {
+   transform: rotate(45deg);
+}
+
+.questions__item_active .questions__link {
+    background: #f7f6ff;   
+}
+
+.questions__item_active .questions__text {
+    display: block;
+
 }
 
 @include Tablet {
@@ -84,3 +101,4 @@
 
     }
 }
+
