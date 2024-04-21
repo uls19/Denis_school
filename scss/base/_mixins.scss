@@ -10,21 +10,28 @@
       @content;
     }
   }
-  // Устройства Medium (планшеты, менее 992 пикселей)
+  // Устройства Medium (планшеты, менее 961 пикселей)
   @mixin Tablet {
-    @media screen and (max-width: 991px) {
+    @media screen and (max-width: 961px) {
       @content;
     }
   }
-  // Устройства Small (телефоны с горизонтальной ориентацией, менее 768 пикселей)
+  // Устройства Small (телефоны с горизонтальной ориентацией, менее 641 пикселей)
   @mixin Mobile {
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 640px) {
       @content;
     }
   }
-  // Устройства X-Small (портретные телефоны, менее 576 пикселей)
+  // Устройства X-Small (портретные телефоны, менее 481 пикселей)
   @mixin X-Mobile {
-    @media screen and (max-width: 575px) {
+    @media screen and (max-width: 481px) {
       @content;
     }
   }
+
+  // Устройства XX-Small (портретные телефоны, менее 320 пикселей)
+  // @mixin XX-Mobile {
+  //   @media screen and (max-width: 320px) {
+  //     @content;
+  //   }
+  // }

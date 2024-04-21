@@ -1,10 +1,15 @@
-.content__top {
+.content__top-wrapper {
     display: flex;
-    justify-content: space-between;
-    gap: 17px;
-    padding: 87px 20px 120px;
+    padding: 87px 20px 120px 20px;
+    gap: 12px;
 }
 
+.content__top,
+.content__bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+}
 
 .content__top-info1,
 .content__top-info2,
@@ -18,7 +23,7 @@
 
 .content__top-info1 {
     background: #ffe483;
-    background-image: url(./../image/icon_rating.svg);
+    background-image: url(./../image/icon_rating.png);
     background-repeat: no-repeat;
     background-position: top 32px center;
 }
@@ -32,7 +37,7 @@
 
 .content__top-info3 {
     background: #ffe483;
-    background-image: url(./../image/feedback.svg);
+    background-image: url(./../image/feedback.png);
     background-repeat: no-repeat;
     background-position: top 32px center;
 }
@@ -61,39 +66,162 @@
     font-weight: 600;
 }
 
-@include Tablet {
+@include Desktop {
+    .content__top-wrapper {
+        display: flex;
+        padding: 65px 10px 100px 10px;
+        gap: 20px;
+    }
 
-    .content__top {
-        padding: 57px 20px 90px;
+    .content__top,
+    .content__bottom {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
     }
 
     .content__top-info-text {
         font-size: 16px;
-    }
-}
-
-@include Mobile {
-
-    .content__top {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
     }
 
     .content__top-info1,
     .content__top-info2,
     .content__top-info3,
     .content__top-info4 {
-        
-        width: auto;
+        padding: 93px 10px 20px 10px;
+        width: 220px;
+        border-radius: 30px;
+        text-align: center;
+        background-position: top 26px center;
+        background-size: 48px;
+    }
+
+    .content__top-info-title {
+        padding-bottom: 16px;
+        font-size: 21px;
+    }
+
+}
+
+
+@include Tablet {
+    .content__top-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0px 10px 80px 10px;
+        gap: 20px;
+    }
+
+    .content__top,
+    .content__bottom {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .content__top {
+        justify-content: left;
+    }
+
+    .content__bottom {
+        justify-content: right;
+    }
+
+
+
+    .content__top-info-text {
+        font-size: 16px;
+    }
+
+    .content__top-info1,
+    .content__top-info2,
+    .content__top-info3,
+    .content__top-info4 {
+        padding: 94px 10px 20px 10px;
+        width: 220px;
+        border-radius: 30px;
+        text-align: center;
+    }
+}
+
+@include Mobile {
+
+    .content__top-wrapper {
+        padding: 10px 10px 60px 10px;
+    }
+
+    .content__top {
+        justify-content: left;
+    }
+
+    .content__bottom {
+        justify-content: right;
+    }
+
+    .content__top-info1,
+    .content__top-info2,
+    .content__top-info3,
+    .content__top-info4 {
+        background-size: 40px;
+    }
+
+    .content__top-info3 {
+        background: #d9d0ff;
+        background-image: url(./../image/feedback.png);
+        background-repeat: no-repeat;
+        background-position: top 26px center;
+        background-size: 40px;
+    }
+
+    .content__top-info4 {
+        background: #ffe483;
+        background-image: url(./../image/process.svg);
+        background-repeat: no-repeat;
+        background-position: top 26px center;
+        background-size: 40px;
+
     }
 }
 
 @include X-Mobile {
-    .content__top {
-        grid-template-columns: 1fr;
-        margin: 0 auto;
-        padding: 57px 10px 90px;
-        max-width: 390px;
-    
+
+    .content__top-wrapper {
+        padding: 20px 10px 60px 10px;
+    }
+
+    .content__top,
+    .content__bottom {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .content__top-info1,
+    .content__top-info2,
+    .content__top-info3,
+    .content__top-info4 {
+        padding: 70px 10px 20px 10px;
+        width: auto;
+        background-position: top 20px center;
+    }
+    .content__top-info-title {
+        padding-bottom: 10px;
+    }
+   
+    .content__top-info3 {
+        background: #ffe483;
+        background-image: url(./../image/feedback.png);
+        background-repeat: no-repeat;
+        background-position: top 26px center;
+        background-size: 40px;
+    }
+
+    .content__top-info4 {
+        background: #d9d0ff;
+        background-image: url(./../image/process.svg);
+        background-repeat: no-repeat;
+        background-position: top 26px center;
+        background-size: 40px;
+
     }
 }

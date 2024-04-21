@@ -134,34 +134,74 @@
     left: 0;
 }
 
-@include Tablet {
+@include Desktop {
 
     .video-top {
-        margin-bottom: 90px;
+        height: 530px;
+        margin-bottom: 108px;
+        background-position: bottom 22px center;
+        background-size: 942px 440px;
+    }
+
+    .video-top__box {
+        justify-content: flex-start;
+        padding-left: 125px;
+        padding-right: 10px;
+        column-gap: 20px;
     }
 
     .video-top__header {
-        padding-bottom: 50px;
-        font-size: 36px;
+        font-size: 48px;
+        padding-bottom: 40px;
+    }
+
+    .video-top__header::before {
+        width: 95px;
+        height: 98px;
+        background-size: 95px;
+        background-repeat: no-repeat;
+        top: -34px;
+        left: 300px;
+
+    }
+
+    .video-top__box-left {
+        width: 320px;
+        background-image: url(./../image/foto2.png);
+        background-repeat: no-repeat;
+        background-position: bottom 27px left 0px;
+        background-size: 272px;
     }
 
     .video-top__box-right {
-        padding-top: 150px;
-        max-width: 320px;
+        padding-top: 125px;
+        max-width: 396px;
     }
 
     .video-top__text {
         font-size: 16px;
+        line-height: 130%;
 
         &_bold {
             font-size: 16px;
+            line-height: 130%;
         }
+
     }
 
-    .video-top__header::before {
-        top: -34px;
-        left: 190px;
+    .video-top__text::before {
+        width: 48px;
+        height: 39px;
+        background-size: 48px;
+        top: -18px;
+    }
 
+    .video-top__text_bold::after {
+        width: 48px;
+        height: 39px;
+        background-size: 48px;
+        top: 64px;
+        right: 28px;
     }
 
     .video-top__link-button1,
@@ -171,93 +211,174 @@
         border-radius: 15px;
     }
 
-
     .video-top__link-button1 {
-        width: 290px;  
-    }
+        width: 276px;
+        bottom: 0;
+        right: 0px;
 
-    .video-top__link-button1::after {
-        width: 78px;
-        height: 78px;
-        background-size: cover;
+        &::after {
+            width: 70px;
+            height: 70px;
+            background-size: 70px;
+            left: -35px;
+        }
     }
 
     .video-top__link-button2 {
         width: 320px;
 
     }
+}
+
+
+
+@include Tablet {
+
+    .video-top {
+        position: relative;
+        height: 550px;
+        margin-top: 20px;
+        margin-bottom: 60px;
+        background-image: url(./../image/background_center1_1.jpg);
+        background-size: 620px;
+        background-repeat: no-repeat;
+        background-position: top center;
+        z-index: 5;
+    }
+
+    .video-top__header::before {
+        display: none;
+    }
+
+    .video-top__box {
+        padding-left: 30px;
+    }
+
+    .video-top__box-left {
+        position: static;
+        width: 206px;
+        background-position: bottom 107px center;
+        background-size: 200px;
+    }
+
+    .video-top__box-right {
+        position: static;
+        padding-top: 50px;
+        max-width: 360px;
+    }
+
+    .video-top__link-button1 {
+        padding-right: 36px;
+        justify-content: end;
+        width: 300px;
+        left: 20px;
+        right: 0;
+        margin: 0 auto;
+        bottom: 80px;
+
+        &::after {
+            left: -25px;
+        }
+    }
+
+    .video-top__link-button2 {
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+
+    }
+
+    .video-top__text::before,
+    .video-top__text_bold::after {
+        display: none;
+    }
 
 }
 
+
 @include Mobile {
+
     .video-top {
-        background-position: top 20px center;
-        height: auto;
-         min-height: 580px;   
+        height: 760px;
+        background-image: url(./../image/background_center1_2.jpg);
+        background-size: 460px;
+        background-repeat: no-repeat;
+        z-index: 5;
+    }
+
+    .video-top__header {
+        font-size: 36px;
+        padding-bottom: 40px;
+        text-align: center;
     }
 
     .video-top__box {
         flex-direction: column;
         align-items: center;
-        height: auto;
-        padding-left: 20px;
-    }
-    .video-top__box-left {
-        width: auto;
-        background-image: none;
     }
 
     .video-top__box-right {
-        padding-top: 90px;
-        max-width: 486px;
-    }
-
-    .video-top__link-button1,
-    .video-top__link-button2 {
-        position: relative;
-        margin: 0 auto;
-    }
-
-    .video-top__text_bold {
-        padding-bottom: 30px;
-    }
-    .video-top__header::before {
-        left: auto; 
-        right: 0px ;
+        order: 1;
 
     }
- }
 
-
-@include X-Mobile {
-
-    .video-top__box {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-
-    .video-top__box-left {  
-     width: 100%;
+    .video-top__box-left {
+        order: 2;
+        background-position: bottom 107px center;
+        background-image: url(./../image/foto2_2.png);
+        background-size: 192px;
     }
 
     .video-top__link-button1 {
-        width: auto;
-        max-width: 290px;
-        border-radius: 30px 15px 15px 30px;
-        padding-left: 30px;
-       
+        bottom: 70px;
+    }
+
+}
+
+@include X-Mobile {
+
+    .video-top {
+        height: 756px;
+        background-image: url(./../image/background_center1_3.jpg);
+        background-size: 300px;
+        background-repeat: no-repeat;
+        z-index: 5;
+    }
+
+    .video-top__header {
+        margin: 0 auto;
+        padding-right: 24px;
+        max-width: 198px;
+        font-size: 24px;
+        padding-bottom: 24px;
+    }
+
+    .video-top__box-left {
+        background-position: bottom 130px center;
+        background-image: url(./../image/foto2_2.png);
+        background-size: 153px;
+    }
+
+    .video-top__box-right {
+        overflow: hidden;
+        height: 670px;
+    }
+
+    .video-top__text {
+        max-width: 260px;
+
+        &_bold {
+            max-width: 263px;
+        }
+    }
+
+    .video-top__link-button1 {
+        padding-right: 22px;
+        width: 276px;
+        left: 20px;
     }
 
     .video-top__link-button2 {
-       width: auto;
-       max-width: 290px;
+        width: 300px;
     }
-
-    .video-top__link-button1::after {
-        width: 60px;
-        height: 60px;
-        left: -5px;
-       
-    }
-
 }
